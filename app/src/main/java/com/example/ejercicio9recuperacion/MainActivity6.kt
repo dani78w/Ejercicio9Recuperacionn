@@ -18,19 +18,19 @@ class MainActivity6 : AppCompatActivity() {
 
         dado.setOnClickListener(){
 
-            var rand = Random.nextInt(1,5)
+            var rand = Random.nextInt(1,3)
             if(rand==1){
                 val intent = Intent(this, Objeto::class.java)
                 intent.putExtra("personaje", pers)
                 startActivity(intent)
             }
             if(rand==2){
-                val intent = Intent(this, Mercader::class.java)
+                val intent = Intent(this, Objeto::class.java)
                 intent.putExtra("personaje", pers)
                 startActivity(intent)
             }
             if(rand==3){
-                val intent = Intent(this, Enemigo::class.java)
+                val intent = Intent(this, Objeto::class.java)
                 intent.putExtra("personaje", pers)
                 startActivity(intent)
             }

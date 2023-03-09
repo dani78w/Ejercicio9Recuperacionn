@@ -3,14 +3,11 @@ package com.example.ejercicio9recuperacion
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
 
 class MainActivity5 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +16,10 @@ class MainActivity5 : AppCompatActivity() {
 
         var pers = intent.getSerializableExtra("personaje") as Personaje
         var imagen1: ImageView = findViewById(R.id.imageView2)
-        var imagen2: ImageView = findViewById(R.id.imageView)
+        var imagen2: ImageView = findViewById(R.id.imageViewObjeto)
         var textView = findViewById<TextView>(R.id.textView3)
         var textView2 = findViewById<TextView>(R.id.textView4)
+
 
         if (pers.raza == "guerrero") {
             imagen1.setImageResource(R.drawable.guerrero)
