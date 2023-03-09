@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#000000"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:backgroundTint="#000000"
+            android:clipToOutline="false"
+            android:cropToPadding="false"
+            android:textAlignment="center"
+            app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/magoButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:height="120dp"
+                    android:background="#000000"
+                    android:backgroundTint="#272727"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:isScrollContainer="false"
+                    android:text="Mago"
+                    android:textSize="30sp"
+                    app:icon="@drawable/mago"
+                    app:iconPadding="0dp"
+                    app:iconSize="29sp"
+                    app:shapeAppearance="@style/CardView" />
+
+                <Button
+                    android:id="@+id/ladronButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:height="120dp"
+                    android:background="#000000"
+                    android:backgroundTint="#272727"
+                    android:backgroundTintMode="add"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:isScrollContainer="false"
+                    android:text="Ladrón"
+                    android:textSize="30sp"
+                    app:icon="@drawable/ladron"
+                    app:iconPadding="0dp"
+                    app:iconSize="29sp" />
+
+                <Button
+                    android:id="@+id/guerreroButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:height="120dp"
+                    android:background="#000000"
+                    android:backgroundTint="#272727"
+                    android:backgroundTintMode="add"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:isScrollContainer="false"
+                    android:text="Guerrero"
+                    android:textSize="30sp"
+                    app:icon="@drawable/guerrero"
+                    app:iconPadding="0dp"
+                    app:iconSize="29sp" />
+
+                <Button
+                    android:id="@+id/berserkerButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:height="120dp"
+                    android:background="#000000"
+                    android:backgroundTint="#272727"
+                    android:backgroundTintMode="add"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:isScrollContainer="false"
+                    android:text="Berserker"
+                    android:textSize="30sp"
+                    app:icon="@drawable/berserk"
+                    app:iconPadding="0dp"
+                    app:iconSize="29sp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.3"
+        android:background="#000000"
+        android:elevation="4dp"
+        android:fadingEdgeLength="4dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/siguienteB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:text="Siguiente"
+            app:icon="@drawable/baseline_arrow_forward_24"
+            app:iconGravity="end" />
+    </LinearLayout>
+
+</LinearLayout>
