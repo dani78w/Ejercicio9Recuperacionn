@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".MainActivity4">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_marginTop="172dp"
         android:fontFamily="sans-serif-light"
         android:text="HAS ESCOGIDO LA RAZA:"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,16 +27,19 @@
         android:layout_marginTop="30dp"
         android:fontFamily="sans-serif-black"
         android:text="RAZA"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <Button
         android:id="@+id/siguienteB2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
         android:text="siguiente"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

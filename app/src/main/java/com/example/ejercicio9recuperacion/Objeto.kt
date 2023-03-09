@@ -20,6 +20,7 @@ class Objeto : AppCompatActivity() {
         var nombre = arrayOf("pocion","arco","escudo")
         var imageView :ImageView = findViewById(R.id.imageViewObjeto)
         var text:TextView = findViewById(R.id.textViewObjeto)
+        var mochila:TextView = findViewById(R.id.mochila)
         var indicador:TextView = findViewById(R.id.indicadorObjeto)
         var volver: Button = findViewById(R.id.volverObjeto)
         var comprar: Button = findViewById(R.id.comprarObjeto)
@@ -28,6 +29,12 @@ class Objeto : AppCompatActivity() {
         imageView.background = getDrawable(fotos[rand])
         text.text = nombre[rand]
 
+        if(mochila.text == "[]"){
+            mochila.text = "Mochila vacia"
+        }
+        else{
+            mochila.text = pers.mochila.toString()
+        }
 
         volver.setOnClickListener(){
             val intent = Intent(this, MainActivity6::class.java)
@@ -44,9 +51,11 @@ class Objeto : AppCompatActivity() {
                 comprar.setOnClickListener() {
                     pers.tamMochila = pers.tamMochila - 10
                     pers.mochila.add(nombre[rand])
+                    pers.vida = pers.vida + 20
                     val intent = Intent(this, MainActivity6::class.java)
                     intent.putExtra("personaje", pers)
                     startActivity(intent)
+
                 }
             } else {
                 indicador.text = "No te cabe en la mochila"
