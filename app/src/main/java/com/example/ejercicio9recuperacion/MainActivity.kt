@@ -39,9 +39,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         siguienteButton.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra("personaje", personaje)
-            startActivity(intent)
+            if(!(personaje.clase=="")){
+                val intent = Intent(this, MainActivity2::class.java)
+                intent.putExtra("personaje", personaje)
+                startActivity(intent)
+            }
+
         }
 
 
