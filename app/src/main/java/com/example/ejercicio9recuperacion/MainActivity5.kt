@@ -34,12 +34,16 @@ class MainActivity5 : AppCompatActivity() {
 
         if (pers.clase == "Humano") {
             imagen2.setImageResource(R.drawable.humano)
+            pers.imgSelected = 0
         } else if (pers.clase == "Elfo") {
             imagen2.setImageResource(R.drawable.elfo)
+            pers.imgSelected = 1
         } else if (pers.clase == "Enano") {
             imagen2.setImageResource(R.drawable.enano)
+            pers.imgSelected = 2
         } else if (pers.clase == "Gobling") {
             imagen2.setImageResource(R.drawable.gobling)
+            pers.imgSelected = 3
         }
         textView2.text=pers.clase.uppercase()
 
