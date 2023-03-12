@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.text.isDigitsOnly
 import androidx.core.widget.doAfterTextChanged
 
 class MainActivity5 : AppCompatActivity() {
@@ -30,7 +31,7 @@ class MainActivity5 : AppCompatActivity() {
         } else if (pers.raza == "berserker") {
             imagen1.setImageResource(R.drawable.berserk)
         }
-        textView.text=pers.raza.uppercase()
+        textView.text = pers.raza.uppercase()
 
         if (pers.clase == "Humano") {
             imagen2.setImageResource(R.drawable.humano)
@@ -45,44 +46,46 @@ class MainActivity5 : AppCompatActivity() {
             imagen2.setImageResource(R.drawable.gobling)
             pers.imgSelected = 3
         }
-        textView2.text=pers.clase.uppercase()
+        textView2.text = pers.clase.uppercase()
 
         var textView4 = findViewById<TextView>(R.id.textView6)
         var textView5 = findViewById<TextView>(R.id.textView7)
         var textView6 = findViewById<TextView>(R.id.textView8)
         var textView7 = findViewById<TextView>(R.id.textView9)
+        var textView10= findViewById<TextView>(R.id.textView10)
 
-        textView4.text="Fuerza : "+pers.fuerza.toString()
-        textView5.text="Defensa : "+pers.defensa.toString()
-        textView6.text="Tamaño de la mochila: "+pers.tamMochila.toString()
-        textView7.text="Vida : "+pers.vida.toString()
+        textView4.text = "Fuerza : " + pers.fuerza.toString()
+        textView5.text = "Defensa : " + pers.defensa.toString()
+        textView10.text = "Monedero: "+pers.monedero.toString()
+        textView6.text = "Tamaño de la mochila: " + pers.tamMochila.toString()
+        textView7.text = "Vida : " + pers.vida.toString()
 
         var button: Button = findViewById(R.id.button)
         var button2: Button = findViewById(R.id.button2)
 
-        var editText : EditText = findViewById(R.id.editTextTextPersonName2)
+        var editText: EditText = findViewById(R.id.editTextTextPersonName2)
 
-        editText.doAfterTextChanged{
-            pers.nombre=editText.text.toString()
+        editText.doAfterTextChanged {
+            pers.nombre = editText.text.toString()
         }
 
         button.setOnClickListener {
+                if (editText.text.isDigitsOnly()) { editText.setError("Solo numeros no")}
+                else if (editText.text.toString().isEmpty()) {
+                    editText.setError("Introduce un nombre")
+                } else {
 
-            if(editText.text.toString().isEmpty()){
-                editText.setError("Introduce un nombre")
-            }else{
-
-                val intent = Intent(this, MainActivity6::class.java)
+                    val intent = Intent(this, MainActivity6::class.java)
+                    intent.putExtra("personaje", pers)
+                    startActivity(intent)
+                }
+            }
+            button2.setOnClickListener {
+                val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("personaje", pers)
                 startActivity(intent)
             }
-        }
-        button2.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("personaje", pers)
-            startActivity(intent)
-        }
 
 
+        }
     }
-}

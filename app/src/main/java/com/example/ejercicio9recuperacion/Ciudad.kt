@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 
 class Ciudad : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ciudad)
 
-        var button: ImageButton = findViewById(R.id.imageButton4)
+        var button: ImageView = findViewById(R.id.dado)
         var pers = intent.getSerializableExtra("personaje") as Personaje
         pers.modoCiudad=true
 
